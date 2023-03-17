@@ -23,9 +23,9 @@ tablero = [
             [0, 0, 0, 0, 0, 0, 0],  
             [0, 0, 0, 0, 0, 0, 0]   
               ]
-ficha = "9"
+ficha = 0
 columna = 0
-secuencia = [1, 2, 3, 1]
+secuencia = [1, 2, 3, 1, 3, 4]
 
 soltar_ficha(columna, tablero, secuencia)
 
