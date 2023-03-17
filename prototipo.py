@@ -1,3 +1,12 @@
+import sys
+
+def validar_secuencia(secuencia):
+    for num in secuencia:
+        if num > 7:
+            print(f"El número {num} no es un número válido, los números de las columnas donde se sueltan las fichas deben ser menores que 7")
+            sys.exit()
+    return None
+
 def soltar_ficha(columna, tablero, secuencia):
     ficha = 1
     for i in range(len(secuencia)):
@@ -25,8 +34,8 @@ tablero = [
               ]
 ficha = 0
 columna = 0
-secuencia = [1, 2, 3, 1, 3, 4]
+secuencia = [1, 2, 3, 1, 3, 4, 32]
 
+validar_secuencia(secuencia)
 soltar_ficha(columna, tablero, secuencia)
-
 imprimir_tablero(tablero)
