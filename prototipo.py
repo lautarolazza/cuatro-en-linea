@@ -34,7 +34,7 @@ tablero = [
               ]
 ficha = 0
 columna = 0
-secuencia = [1, 2, 3, 1, 3, 4, 32]
+secuencia = [1, 2, 3, 1, 3, 4, 5, 32]
 
 validar_secuencia(secuencia)
 soltar_ficha(columna, tablero, secuencia)
