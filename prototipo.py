@@ -7,6 +7,13 @@ def validar_secuencia(secuencia):
             sys.exit()
     return None
 
+def contenido_columna(numero_columna, tablero):
+    columna = []
+    for fila in tablero:
+        celda = fila[numero_columna - 1]
+        columna.append(celda)
+    return columna
+
 def soltar_ficha(columna, tablero, secuencia):
     ficha = 1
     for i in range(len(secuencia)):
