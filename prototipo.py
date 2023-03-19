@@ -12,13 +12,33 @@ def contenido_columna(numero_columna, tablero):
     for fila in tablero:
         celda = fila[numero_columna - 1]
         columna.append(celda)
-    return columna
+    return columna 
+
+def contenido_fila(numero_fila, tablero):
+    fila = []
+    for celda in tablero[numero_fila - 1]:
+        fila.append(celda)
+    return fila    
+
+def contenido_todas_columnas(tablero):
+    columnas = []
+    for numero_columna in range(1, 8):
+        columna = contenido_columna(numero_columna, tablero)
+        columnas.append(columna)
+    return columnas
+
+def contenido_todas_filas(tablero):
+    filas = []
+    for numero_fila in range(1, 7):
+        fila = contenido_fila(numero_fila, tablero)
+        filas.append(fila)
+    return filas
 
 def soltar_ficha(columna, tablero, secuencia):
     ficha = 1
     for i in range(len(secuencia)):
         columna = secuencia[i]
-        for fila in range(6, 0, -1):
+        for fila in range(6, 0, -1):    
             if tablero[fila - 1][columna - 1] == 0:
                 tablero[fila - 1][columna - 1] = ficha
                 ficha = 2 if ficha == 1 else 1
@@ -48,3 +68,6 @@ soltar_ficha(columna, tablero, secuencia)
 imprimir_tablero(tablero)
 
 print(contenido_columna(1, tablero))
+print(contenido_fila(5, tablero))
+print(contenido_todas_columnas(tablero))
+print(contenido_todas_filas(tablero))
