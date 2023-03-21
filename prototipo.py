@@ -46,10 +46,17 @@ def soltar_ficha(columna, tablero, secuencia):
     return tablero
 
 def imprimir_tablero(tablero):
-    for fila in tablero: 
-        for elemento in fila:
-            print(elemento, end=' ')
-        print()
+    for fila in tablero:
+        print("|", end=" ")
+        for celda in fila:
+            if celda == 1:
+                print("1", end=" ")
+            elif celda == 2:
+                print("2", end=" ")
+            else:
+                print(" ", end=" ")
+        print("|")
+    print("+---------------+")
 
 tablero = [
             [0, 0, 0, 0, 0, 0, 0],  
@@ -67,7 +74,7 @@ validar_secuencia(secuencia)
 soltar_ficha(columna, tablero, secuencia)
 imprimir_tablero(tablero)
 
-print(contenido_columna(1, tablero))
-print(contenido_fila(5, tablero))
-print(contenido_todas_columnas(tablero))
-print(contenido_todas_filas(tablero))
+#print(contenido_columna(1, tablero))
+#print(contenido_fila(5, tablero))
+#print(contenido_todas_columnas(tablero))
+#print(contenido_todas_filas(tablero))   
