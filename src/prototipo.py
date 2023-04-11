@@ -58,6 +58,17 @@ def imprimir_tablero(tablero):
         print("|")
     print("+---------------+")
 
+def tablero_vacio():    
+    tablero = [
+            [0, 0, 0, 0, 0, 0, 0],  
+            [0, 0, 0, 0, 0, 0, 0],  
+            [0, 0, 0, 0, 0, 0, 0],  
+            [0, 0, 0, 0, 0, 0, 0],  
+            [0, 0, 0, 0, 0, 0, 0],  
+            [0, 0, 0, 0, 0, 0, 0]   
+              ]
+    return tablero
+
 tablero = [
             [0, 0, 0, 0, 0, 0, 0],  
             [0, 0, 0, 0, 0, 0, 0],  
@@ -70,6 +81,7 @@ ficha = 0
 columna = 0
 secuencia = [1, 2, 3, 1, 3, 4, 5]
 
+tablero_vacio
 validar_secuencia(secuencia)
 soltar_ficha(columna, tablero, secuencia)
 imprimir_tablero(tablero)
